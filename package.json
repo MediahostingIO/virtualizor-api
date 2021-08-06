@@ -1,14 +1,25 @@
 {
   "name": "virtualizor-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Api-Wrapper for Virtualizor.",
+  "main": "lib/virtualizor.js",
+  "types": "lib/virtualizor.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags",
+    "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "virtualizor",
+    "virtualizor-api"
+  ],
+  "author": "liam",
+  "license": "Apache-2.0",
   "dependencies": {
     "axios": "^0.21.1"
   },
@@ -19,5 +30,16 @@
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MediahostingIO/virtualizor-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MediahostingIO/virtualizor-api/issues"
+  },
+  "homepage": "https://github.com/MediahostingIO/virtualizor-api#readme",
+  "directories": {
+    "lib": "lib"
   }
 }
