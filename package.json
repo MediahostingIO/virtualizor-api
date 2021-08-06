@@ -1,5 +1,5 @@
 {
-  "name": "virtualizor-api",
+  "name": "@mediahosting/virtualizor-api",
   "version": "1.0.0",
   "description": "Api-Wrapper for Virtualizor.",
   "main": "lib/virtualizor.js",
