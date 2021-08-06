@@ -3,7 +3,7 @@ import { VirtualizorApi } from "./utils/virtualizorApi";
 import { VpsController } from "./controller/VpsController";
 import { IpController } from "./controller/IpController";
 
-export class Virtualizor {
+class Virtualizor {
     private readonly options: Options;
 
     constructor(options: Options) {
@@ -14,3 +14,5 @@ export class Virtualizor {
     public virtualServer = new VpsController();
     public ipPool = new IpController();
 }
+
+export { Virtualizor };
