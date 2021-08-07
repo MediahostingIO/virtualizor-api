@@ -5,7 +5,7 @@ import { ListVpsDTO, ListVpsResponse } from "../types/vps/vps";
 
 export class VpsController {
     public createVps(data: CreateVpsDTO): Promise<CreateVpsResponse> {
-        return VirtualizorApi.call('creatVps', {data});
+        return VirtualizorApi.call('addvs', {data});
     }
 
     public listVirtualServers(data: { page?: number, recordsPerPage?: number, searchOptions?: ListVpsDTO }): Promise<ListVpsResponse> {
