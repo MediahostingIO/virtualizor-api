@@ -2,6 +2,7 @@ import { Options } from "./types/options";
 import { VirtualizorApi } from "./utils/virtualizorApi";
 import { VpsController } from "./controller/VpsController";
 import { IpController } from "./controller/IpController";
+import { StatisticsController } from "./controller/StatisticsController";
 
 class Virtualizor {
     private readonly options: Options;
@@ -11,8 +12,9 @@ class Virtualizor {
         VirtualizorApi.initialize(this.options);
     }
 
-    public virtualServer = new VpsController();
-    public ipPool = new IpController();
+    public readonly virtualServer = new VpsController();
+    public readonly ipPool = new IpController();
+    public readonly statistics = new StatisticsController();
 }
 
 export { Virtualizor };
