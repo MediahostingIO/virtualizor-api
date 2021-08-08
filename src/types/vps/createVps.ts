@@ -3,6 +3,7 @@ export interface CreateVpsDTO {
     user_email: string;
     user_pass: string;
     hostname: string;
+    addvps: number;
     rootpass: string;
     slave_server?: number;
     osid: number;
@@ -10,7 +11,7 @@ export interface CreateVpsDTO {
     space: { size: number, st_uuid?: string }[];
     ram: number;
     bandwidth: number;
-    cors: number;
+    cores: number;
     plid?: number;
     network_speed?: number;
     mgs?: string;

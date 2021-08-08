@@ -1,4 +1,5 @@
 import { Options } from "../types/options";
+import { stringify } from 'qs'
 import axios, { Method } from "axios";
 
 export class VirtualizorApi {
@@ -13,7 +14,7 @@ export class VirtualizorApi {
     public static call(act: string, options?: { headers?: any, params?: any, data?: any, method?: Method }): Promise<any> {
         return axios.request({
             url: `${this.host}/index.php`,
-            data: options.data,
+            data: stringify(options.data),
             method: options.method ?? 'POST',
             params: {
                 api: 'json',
@@ -22,11 +23,20 @@ export class VirtualizorApi {
                 ...options.params,
             },
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
                 ...options.headers,
             },
         })
             .then(value => value.data)
             .catch(reason => reason.response ?? reason);
+    }
+
+    private static isJson(data): boolean {
+        try {
+            JSON.stringify(data);
+            return true;
+        } catch (e) {
+            return false;
+        }
     }
 }

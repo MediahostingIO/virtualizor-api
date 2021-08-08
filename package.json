@@ -21,9 +21,12 @@
   "author": "liam",
   "license": "Apache-2.0",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "qs": "^6.10.1",
+    "querystring": "^0.2.1"
   },
   "devDependencies": {
+    "@types/qs": "^6.9.7",
     "prettier": "^2.3.2",
     "ts-node": "^10.1.0",
     "tslib": "^2.3.0",
