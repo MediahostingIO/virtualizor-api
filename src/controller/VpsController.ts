@@ -1,10 +1,10 @@
-import { CreateVpsDTO, CreateVpsResponse } from "../types/vps/createVps";
+import { CreateVpsDTO, VsCreateResponse } from "../types/vps/createVps";
 import { VirtualizorApi } from "../utils/virtualizorApi";
 import { ActResponse } from "../types/vps/actResponse";
 import { ListVpsDTO, ListVpsResponse } from "../types/vps/vps";
 
 export class VpsController {
-    public createVps(data: CreateVpsDTO): Promise<CreateVpsResponse> {
+    public createVps(data: CreateVpsDTO): Promise<VsCreateResponse> {
         return VirtualizorApi.call('addvs', {data});
     }
 
