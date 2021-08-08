@@ -1,4 +1,3 @@
-
 export interface ListVpsDTO {
     vpsid?: number;
     vpsip?: string;
@@ -71,7 +70,7 @@ export interface Server {
     patch: string;
     lic_expires: string;
     checked: string;
-    locked: string;
+    locked?: string;
     vcores: string;
     ips: string;
     ipv6: string;
@@ -170,7 +169,7 @@ export interface Vps {
     mac: string;
     notes: null;
     disable_nw_config: string;
-    locked: string;
+    locked?: string;
     openvz_features: string;
     speed_cap: string;
     numa: string;
