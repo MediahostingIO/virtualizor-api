@@ -1,3 +1,5 @@
+import { BasicResponse } from "../basicResponse";
+
 export interface ListVpsDTO {
     vpsid?: number;
     vpsip?: string;
@@ -12,16 +14,13 @@ export interface ListVpsDTO {
     bpid?: string[];
 }
 
-export interface ListVpsResponse {
-    title: string;
+export interface ListVpsResponse extends BasicResponse {
     vs: { [key: string]: Vps };
     ostemplates: { [key: string]: Ostemplate };
     servers: Server[];
     owners: any[];
     plans: { [key: string]: string };
     backup_plans: BackupPlans;
-    timenow: number;
-    time_taken: string;
 }
 
 export interface BackupPlans {

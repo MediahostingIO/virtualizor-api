@@ -1,10 +1,9 @@
-export interface ActResponse {
-    title: string;
+import { BasicResponse } from "../basicResponse";
+
+export interface ActResponse extends BasicResponse {
     done: boolean;
     done_msg: string;
     vsop: Vsop;
-    timenow: number;
-    time_taken: string;
 }
 
 export interface Vsop {
