@@ -1,6 +1,6 @@
 {
   "name": "@mediahosting/virtualizor-api",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Api-Wrapper for Virtualizor.",
   "main": "lib/virtualizor.js",
   "types": "lib/virtualizor.d.ts",
