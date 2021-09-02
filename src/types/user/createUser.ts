@@ -14,6 +14,7 @@ export interface CreateUserDTO {
     space?: number;
     burst?: number;
     bandwidth?: number;
+    ram?: number;
     cpu?: number;
     cores?: number;
     cpu_percent?: number;
